@@ -16,3 +16,5 @@ username  password
 tester   - tester
 analyst  - analyst
 admini   - admini
+
+Please note : You will need the backend server to be running in order to work on this. 
