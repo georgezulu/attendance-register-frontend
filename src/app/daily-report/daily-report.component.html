@@ -1,0 +1,27 @@
+<h2> Daily Report</h2>
+<table class = "table table-stripped">
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Grade</th>
+            <th>Student Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Present</th>
+
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let register of registers">
+            <td> {{ register.className}}</td>
+            <td> {{ register.grade}}</td>
+            <td> {{ register.studentName}}</td>
+            <td> {{ register.date}}</td>
+            <td> {{ register.time}}</td>
+            <td> {{ register.present}}</td>
+
+        </tr>
+    </tbody>    
+    <a href="#" routerLink="/home" class="btn btn-primary" style="margin-left: 100px">Back</a><br>
+</table>

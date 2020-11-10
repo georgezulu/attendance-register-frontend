@@ -1,0 +1,50 @@
+<h4> Student List</h4>
+<br/>
+<article>
+    <div>
+    <h5><span>Load Students from Class :</span></h5>
+    <select (change)="selectChangeHandler($event)">
+        <option value=""></option>
+        <option value="A">Class A</option>
+        <option value="B">Class B</option>
+        <option value="C">Class C</option>
+        <option value="D">Class D</option>
+        <option value="E">Class E</option>
+        <option value="F">Class F</option>
+    </select>
+</div>
+</article>
+    <tr>
+        <th>Date : {{todayDate | date:'longDate'}}</th>
+    </tr>
+   <br/><br/>
+   <form > 
+<table class = "table table-stripped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Grade</th>
+            <th>Class</th>
+            <th>Present?</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor = "let student of students">
+            <td> {{ student.name}}</td>
+            <td> {{ student.surname}}</td>
+            <td> {{ student.grade}}</td>
+            <td> {{ student.clas}}</td>
+           <td> <input type="checkbox" [checked]="student.present" (change)="student.present = !student.present"/></td>
+         </tr>
+    
+</tbody>  
+    
+</table>
+<tr>
+    <button (click) = "fetchStudents(students)" class="btn btn-info">Submit</button>
+    <a href="#" routerLink="/home" class="btn btn-primary" style="margin-left: 100px">Back</a><br><br>
+</tr>
+</form>

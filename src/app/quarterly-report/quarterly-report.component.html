@@ -1,0 +1,23 @@
+<h2> Quarterly Report</h2>
+<table class = "table table-stripped">
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Grade</th>
+            <th>Student Name</th>
+            <th>Classes Attended</th>
+            <th>Classes Missed</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let register of registers">
+            <td> {{ register.className}}</td>
+            <td> {{ register.grade}}</td>
+            <td> {{ register.studentName}}</td>
+            <td> {{ register.missedClasses}}</td>
+            <td> {{ register.attendedClasses}}</td>
+        </tr>
+    </tbody>    
+    <a href="#" routerLink="/home" class="btn btn-primary" style="margin-left: 100px">Back</a><br>
+</table>
